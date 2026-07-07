@@ -1,0 +1,59 @@
+{
+  "name": "openclaw-plugin-ternlight",
+  "version": "0.1.0",
+  "description": "Standalone OpenClaw memory embedding plugin backed by local Ternlight embeddings.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/langcraft-flux/openclaw-plugin-ternlight.git"
+  },
+  "homepage": "https://github.com/langcraft-flux/openclaw-plugin-ternlight#readme",
+  "bugs": {
+    "url": "https://github.com/langcraft-flux/openclaw-plugin-ternlight/issues"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "embeddings",
+    "ternlight",
+    "memory"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./adapter": "./ternlight-adapter.js"
+  },
+  "files": [
+    "index.js",
+    "ternlight-adapter.js",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "test"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "test:ci": "node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "dependencies": {
+    "@ternlight/base": "0.1.0",
+    "@ternlight/mini": "0.1.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.4.23"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}

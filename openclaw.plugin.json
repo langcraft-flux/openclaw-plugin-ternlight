@@ -1,0 +1,16 @@
+{
+  "id": "ternlight",
+  "name": "Ternlight Memory Embeddings",
+  "description": "Local Ternlight-backed memory embedding provider for OpenClaw.",
+  "enabledByDefault": false,
+  "contracts": {
+    "memoryEmbeddingProviders": [
+      "ternlight"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
