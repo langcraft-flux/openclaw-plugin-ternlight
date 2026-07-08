@@ -13,10 +13,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: packages/openclaw-plugin-ternlight/package-lock.json
+          cache-dependency-path: package-lock.json
       - run: npm ci
-        working-directory: packages/openclaw-plugin-ternlight
       - run: npm run test:ci
-        working-directory: packages/openclaw-plugin-ternlight
       - run: npm run pack:check
-        working-directory: packages/openclaw-plugin-ternlight
